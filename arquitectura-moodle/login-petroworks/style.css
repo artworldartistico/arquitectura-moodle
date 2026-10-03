@@ -1,0 +1,655 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*HEADER SECTION*/
+
+.header{
+    padding: 20px 0 3px 0;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.text {
+    font-size: 3.5em;
+    color: #26A146;
+    font-weight: bold;
+    position: relative;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    text-transform: uppercase;
+}
+
+.text img {
+    height: 1.5em;
+    vertical-align: middle;
+    margin-bottom: 24px;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*HOME SECTION*/
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.home .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(
+        225deg,
+        #26a14750,
+        #03a8f459
+    )
+    ,url(images/DJI_0814.JPG);
+	background-size: cover;
+  	background-repeat:no-repeat;
+  	background-position: center center;
+  	background-attachment: fixed;
+  	overflow: hidden;
+    object-fit: cover;
+}
+
+/*.home .imgBx:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#26A146,#03a9f4);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+
+.home .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}*/
+
+.home .contentBx{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .contentBx .formBx{
+    width: 50%;
+}
+
+.home .contentBx .formBx h2{
+    color: #707173;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #26A146;
+    display: inline-block;
+    letter-spacing: 1px ;
+}
+
+.home .contentBx .formBx .inputBx{
+    margin-bottom: 20px;
+}
+
+.home .contentBx .formBx .inputBx span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #46635e;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.home .contentBx .formBx .inputBx input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #46635e;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #46635e;
+    background: transparent;
+    border-radius: 30px;
+}
+
+.home .contentBx .formBx .inputBx input[type="submit"]{
+    background: #26A146;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.home .contentBx .formBx .inputBx input[type="submit"]:hover{
+    background: #1a7031;
+}
+
+.home .contentBx .formBx .inputBx input::placeholder{
+    color: #dadada;
+}
+
+.home .contentBx .formBx .inputBx input::-webkit-input-placeholder{
+    color: #dadada;
+}
+
+.home .contentBx .formBx .inputBx input::-moz-placeholder{
+    color: #dadada;
+}
+
+.home .contentBx .formBx .inputBx input:-ms-input-placeholder{
+    color: #dadada;
+}
+
+.home .contentBx .formBx .inputBx input::-ms-input-placeholder{
+    color: #dadada;
+}
+
+.home .contentBx .formBx .remember{
+    margin-bottom: 10px;
+    color: #46635e;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.home .contentBx .formBx .remember input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+.home .contentBx .formBx .inputBx p{
+    color: #46635e;
+    text-align: center;
+    align-items: center;
+}
+
+.home .contentBx .formBx .inputBx p a{
+    color: #26A146;
+}
+
+/*HIDE AND SHOW PASSWORD*/
+
+.home .contentBx .formBx form .wrapper{
+    position: relative;
+  }
+  
+  .home .contentBx .formBx form .wrapper input:valid ~ span{
+    display: block;
+  }
+  
+  .home .contentBx .formBx form .wrapper span{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #46635e;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .home .contentBx .formBx form .wrapper span i.hide-btn:before{
+    content: "\f070";
+  }
+
+/*BOX CONTAINER LOGOS*/
+
+.home .imgBx .box-container{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+.home .imgBx .box-container .box{
+    margin: 1rem 0.5rem;
+    border-radius: 10rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.932);
+    padding: 1rem 1.3rem;
+    flex: 1 1 30rem;
+    cursor: pointer;
+    max-width: 10rem;
+    min-height: 160px;
+    align-items: center;
+    transition: 0.5s ease all;
+    display: flex;
+}
+
+.home .imgBx .box-container .box img{
+    width: 100%;
+    padding: 1rem;
+}
+
+.home .imgBx .box-container .box:hover > *{
+    color: #ffffff;
+}
+
+/*SLIDER BACKGROUND*/
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    animation: zoom 10s infinite;
+}
+
+.slide:nth-child(1) {
+    background-image: url('images/DJI_0006.JPG');
+}
+
+.slide:nth-child(2) {
+    background-image: url('images/DJI_0065.JPG');
+}
+
+.slide:nth-child(3) {
+    background-image: url('images/DJI_0119.JPG');
+}
+
+.slide:nth-child(4) {
+    background-image: url('images/DJI_0226.JPG');
+}
+
+.slide:nth-child(5) {
+    background-image: url('images/DJI_0814.JPG');
+}
+
+.slide:nth-child(6) {
+    background-image: url('images/DJI_0912.JPG');
+}
+
+.slide:nth-child(7) {
+    background-image: url('images/DJI_0921.JPG');
+}
+
+.slide:nth-child(8) {
+    background-image: url('images/DJI_0921.JPG');
+}
+
+.slide:nth-child(9) {
+    background-image: url('images/DJI_0927.JPG');
+}
+
+.slide:nth-child(10) {
+    background-image: url('images/DJI_0929.JPG');
+}
+
+.slide:nth-child(11) {
+    background-image: url('images/DJI_0965.JPG');
+}
+
+.slide:nth-child(12) {
+    background-image: url('images/DJI_0981.JPG');
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    8.33% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.slide:nth-child(1) {
+    animation: zoom 10s infinite, fade 120s infinite;
+}
+
+.slide:nth-child(2) {
+    animation: zoom 10s infinite 10s, fade 120s infinite 10s;
+}
+
+.slide:nth-child(3) {
+    animation: zoom 10s infinite 20s, fade 120s infinite 20s;
+}
+
+.slide:nth-child(4) {
+    animation: zoom 10s infinite 30s, fade 120s infinite 30s;
+}
+
+.slide:nth-child(5) {
+    animation: zoom 10s infinite 40s, fade 120s infinite 40s;
+}
+
+.slide:nth-child(6) {
+    animation: zoom 10s infinite 50s, fade 120s infinite 50s;
+}
+
+.slide:nth-child(7) {
+    animation: zoom 10s infinite 60s, fade 120s infinite 60s;
+}
+
+.slide:nth-child(8) {
+    animation: zoom 10s infinite 70s, fade 120s infinite 70s;
+}
+
+.slide:nth-child(9) {
+    animation: zoom 10s infinite 80s, fade 120s infinite 80s;
+}
+
+.slide:nth-child(10) {
+    animation: zoom 10s infinite 90s, fade 120s infinite 90s;
+}
+
+.slide:nth-child(11) {
+    animation: zoom 10s infinite 100s, fade 120s infinite 100s;
+}
+
+.slide:nth-child(12) {
+    animation: zoom 10s infinite 110s, fade 120s infinite 110s;
+}
+
+/*MULTIPLE TYPING TEXT ANIMATION*/
+
+.container{
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.container .block-text{
+    background-color: #1a7031;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.container .block-text .text{
+    position: relative;
+    color:#ffffff;
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: -5px;
+}
+
+.container .block-text .text.first-text{
+    color: #ffffff;
+    letter-spacing: 1.5px;
+}
+
+.container .block-text .text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    height: 100%;
+    width: 100%;
+    background-color: #1a7031;
+    border-left: 2px solid #ffffff;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.container p{
+    font-size: 25px;
+    color: #FFFFFF;
+    padding: 20px;
+    z-index: 2;
+}
+
+/*SLIDER VIDEOS*/
+
+.container-video {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-video .slider-videos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-video ul {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    white-space: nowrap; /* Evitar que los elementos se envuelvan */
+    width: 100%;
+    padding: 10px 0;
+}
+
+.container-video ul::-webkit-scrollbar {
+    display: none; /* Ocultar scrollbar en dispositivos móviles */
+}
+
+.container-video ul li {
+    list-style: none;
+    cursor: pointer;
+    margin: 10px;
+    display: inline-block; /* Asegurarse de que los elementos se alineen horizontalmente */
+}
+
+.container-video ul li video {
+    width: 200px;
+    transition: all 0.3s;
+    display: block; /* Asegurarse de que los videos se muestren correctamente */
+}
+
+.container-video ul li video:hover {
+    transform: scale(1.1);
+}
+
+/* Mejorar la apariencia en dispositivos móviles */
+@media (max-width: 600px) {
+    .container-video ul {
+        justify-content: flex-start;
+    }
+
+    .container-video ul li video {
+        width: 150px;
+    }
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+/*ALERT*/
+.alert {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #d9534f; /* Rojo para errores */
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 768px){
+
+    /*HOME SECTION*/
+
+    .home .imgBx{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .home .contentBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .home .contentBx .formBx{
+        width: 100%;
+        padding: 40px;
+        background: rgb(255 255 255 / 0.9);
+        margin: 50px;
+        border-radius: 25px;
+        margin-top: 200px;
+    }
+
+    /*HEADER SECTION*/
+
+    .header{
+        padding: 15px 0 0 0;
+    }
+
+    .text {
+        font-size: 1.5em;
+    }
+
+    .text img {
+        margin-bottom: 15px;
+    }
+
+    /*BOX CONTAINER LOGOS*/
+
+    .home .imgBx .box-container{
+        height: 0;
+    }
+
+    .home .imgBx .box-container .box{
+        margin: 1rem 0.5rem;
+        padding: 0.5rem 0.7rem;
+        flex: 1 1 30rem;
+        cursor: pointer;
+        max-width: 8rem;
+        min-height: 126px;
+        align-items: center;
+        transition: 0.5s ease all;
+        display: flex;
+    }
+
+    /*MULTIPLE TYPING TEXT ANIMATION*/
+
+    .container .block-text{
+        margin-bottom: 400px;
+    }
+
+    .container .block-text .text{
+        font-size: 30px;
+    }
+
+    .container p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px){
+
+    /*HOME SECTION*/
+
+    .home .contentBx .formBx{
+        margin-top: 250px;
+    }
+
+    /*BOX CONTAINER LOGOS*/
+
+    .home .imgBx .box-container{
+        height: 0;
+    }
+
+    .home .imgBx .box-container .box{
+        padding: 0.1rem 0.2rem;
+        max-width: 6rem;
+        min-height: 100px;
+    }
+}
