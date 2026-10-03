@@ -5,7 +5,7 @@
 
 **Autor:** Andrés Felipe Rodríguez Barbosa · Dirección + Estrategia + Arquitectura + IA
 **Cliente:** Petroworks · Bogotá D.C.
-**Dossier técnico:** `https://artworldartistico.github.io/andresrodriguez/dossier/moodle/`
+**Dossier técnico:** https://artworldartistico.github.io/andresrodriguez/dossier/moodle/
 **Publicación en LinkedIn:** https://lnkd.in/p/ePDQ2n2V
 
 ---
